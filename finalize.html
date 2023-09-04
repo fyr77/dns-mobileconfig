@@ -30,8 +30,8 @@
         <a href="index.html" class="w3-bar-item w3-button w3-mobile">About</a>
         <a href="tool.html" class="w3-bar-item w3-button w3-mobile">Tool</a>
         <a href="finalize.html" class="w3-bar-item w3-button w3-mobile w3-green">Finalize</a>
-        <a href="https://github.com/fyr77/dns-mobileconfig"
-            class="w3-bar-item w3-button w3-right w3-black w3-mobile">GitHub</a>
+        <a href="https://codeberg.org/fyr77/dns-mobileconfig"
+            class="w3-bar-item w3-button w3-right w3-black w3-mobile">Source Code</a>
         <a href="legal.html" class="w3-bar-item w3-button w3-right w3-black w3-mobile">Legal</a>
         <a href="https://encrypted-dns.party/" target="_blank"
             class="w3-bar-item w3-button w3-right w3-blue-grey w3-mobile">Encrypted DNS Party</a>
@@ -62,15 +62,14 @@
                 <h3>How does this work?</h3>
                 <p>This website uses OpenSSL on the server to sign the created profile using S/MIME. The certificates
                     used are saved on the server and issued by Let's Encrypt. The exact backend code can be found <a
-                        href="https://github.com/fyr77/dns-mobileconfig/blob/main/backend.php#L24" target="_blank">on
-                        GitHub.</a></p>
+                        href="https://codeberg.org/fyr77/dns-mobileconfig/src/branch/main/backend.php#L24" target="_blank">on
+                        Codeberg.</a></p>
                 <h3>What happens when the certificate expires?</h3>
                 <p>Let's Encrypt certificates are valid 90 days from the day of issue. When attempting to install a
                     profile with an expired certificate, iOS/macOS will treat it the same as an unsigned profile. A
                     profile that is already installed when the certificate expires will stay installed, but change
                     status from "Verified" to "Unverified". <br>For further details, please see <a
-                        href="https://github.com/fyr77/dns-mobileconfig/issues/23" target="_blank">this issue on
-                        GitHub</a>.</p>
+                        href="https://github.com/fyr77/dns-mobileconfig/issues/23" target="_blank">this issue</a>.</p>
             </div>
         </div>
     </div>
