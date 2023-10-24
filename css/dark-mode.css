@@ -9,4 +9,6 @@
     input[type=text]::placeholder, select::placeholder{color: #9e9e9e;opacity: 1;}
     input[type=text]{color: #fff;}
     .w3-green,.w3-hover-green:hover{color:#fff!important;background-color:#37823a!important}
+    .w3-modal{background-color: rgba(255,255,255,0.2);}
+    .w3-modal-content{background-color:black;}
 }
