@@ -40,15 +40,21 @@
     <div id="dynamicList"></div>
     <br>
     <div class="w3-bar">
-        <button id="downloadBtn" class="w3-button w3-bar-item w3-mobile w3-green" style="width:60%"
-            onclick="saveDynamicDataToFile()" disabled>Download Profile</button>
-        <div class="w3-container w3-bar-item w3-mobile w3-teal" style="width: 20%; text-align: center;">
-            <input type="checkbox" id="signChk">
+        <button id="downloadBtn" class="w3-button w3-bar-item w3-mobile w3-green" style="width:60%" onclick="saveDynamicDataToFile()" disabled>Download Profile</button>
+        <button class="w3-button w3-bar-item w3-mobile w3-dark-gray" style="width:20%" onclick="confirmDel()">Delete All</button>
+        <button onclick="expandAccordion('advanced')" class="w3-button w3-bar-item w3-mobile w3-teal" style="width: 20%;">Advanced...</button>
+    </div>
+    <div id="advanced" class="w3-hide w3-container w3-teal">
+        <p>
+            <input type="checkbox" id="signChk" checked>
             <label for="signChk">Sign Profile</label>
             <a href="#" onclick="document.getElementById('modalSign').style.display='block'">?</a>
-        </div>
-        <button class="w3-button w3-bar-item w3-mobile w3-dark-gray" style="width:20%" onclick="confirmDel()">Delete
-            All</button>
+        </p>
+        <p>
+            <input type="checkbox" id="systemChk">
+            <label for="systemChk">Use system scope</label>
+            <a href="#" onclick="document.getElementById('modalSystem').style.display='block'">?</a>
+        </p>
     </div>
     <div id="modalSign" class="w3-modal">
         <div class="w3-modal-content">
@@ -70,6 +76,17 @@
                     profile that is already installed when the certificate expires will stay installed, but change
                     status from "Verified" to "Unverified". <br>For further details, please see <a
                         href="https://github.com/fyr77/dns-mobileconfig/issues/23" target="_blank">this issue</a>.</p>
+            </div>
+        </div>
+    </div>
+    <div id="modalSystem" class="w3-modal">
+        <div class="w3-modal-content">
+            <div class="w3-container">
+                <span onclick="document.getElementById('modalSystem').style.display='none'"
+                    class="w3-button w3-display-topright">&times;</span>
+                <h3>What is the system scope?</h3>
+                <p>The profile can be marked to use "system" as a scope. The exact effects of this depend on each single application.</p>
+                <p>Please see <a href="https://github.com/paulmillr/encrypted-dns/issues/22" target="_blank">this GitHub issue</a> for further information and discussion on the subject.</p>
             </div>
         </div>
     </div>
